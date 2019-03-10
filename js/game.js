@@ -10,6 +10,7 @@ bg.src = "../img/bg.png"
 
 //нажаите на клавишу
 document.addEventListener("keydown", moveUp);
+document.addEventListener ("tap", moveUp);
 
 function moveUp(){
     yPos -=20;
