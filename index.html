@@ -9,23 +9,36 @@
  <title>Back in the future</title>
  
  <style>
+     
  #canvas {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgb(0, 0, 0) url(img/bg2.png);
+    
 
     }</style>
     
         <script language="JavaScript" type="text/javascript">
-            
+            window.setInterval(function () {
+    if (!this.a || this.a < 0) this.a = 30000; //ширина img
+    else this.a--;
+    document.getElementById("canvas").style.backgroundPosition = this.a + "px 0px" //высота, можно в %%, если родительский элемент тоже в %
+    }, 5); //скорость
             </script>
+            
+                
+            
 </head>
 
      
 
 <body>
     
-  <canvas id="canvas" width="1920" height="1080"></canvas> 
+  <canvas id="canvas" ></canvas> 
   <script src="js/game.js"></script> 
  
 
