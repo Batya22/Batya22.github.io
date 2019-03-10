@@ -1,16 +1,45 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title>Back in the future</title>
+ 
+ <style>
+ #canvas {
+    width: 100%;
+    height: 100%;
+    background: rgb(238, 16, 190) url(img/bg2.png)  fixed;
+    
+
+
+-o-background-size: cover;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+background-size: cover;
+    }</style>
+    
+        <script language="JavaScript" type="text/javascript">
+            window.setInterval(function () {
+            if (!this.a || this.a < 0) this.a = 30000; //ширина img
+            else this.a--;
+            document.getElementById("canvas").style.backgroundPosition = this.a + "px 0px" //высота, можно в %%, если родительский элемент тоже в %
+            }, 5); //скорость
+            </script>
 </head>
+
+     
+
 <body>
+    
+  <canvas id="canvas" width="960" height="600"></canvas> 
+  <script src="js/game.js"></script> 
+ 
 
- <canvas id="canvas" width="960" height="600"></canvas>
+ 
 
-
- <script src="js/game.js"></script>
 </body>
 </html>
