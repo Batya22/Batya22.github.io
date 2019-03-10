@@ -5,8 +5,8 @@ var ctx = cvs.getContext("2d");
 var bg = new Image();
 var delor = new Image();
 
-delor.src = "img/delor.png"
-bg.src = "img/bg.png"
+delor.src = "../img/delor.png"
+bg.src = "../img/bg.png"
 
 //нажаите на клавишу
 document.addEventListener("keydown", moveUp);
