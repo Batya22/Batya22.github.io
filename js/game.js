@@ -43,21 +43,22 @@ function start(){
     xPos -=6;
     score++;
     
+if (score ==1)
+    {
+        timer();
+    }
     window.setInterval(function () {
         if (!this.a || this.a < 0) this.a = 30000; //ширина img
         else this.a--;
         document.getElementById("canvas").style.backgroundPosition = this.a + "px 210px" //высота, можно в %%, если родительский элемент тоже в %
         //beginmusic.play();
-       
-        
-
-        
         
     }, xPos ); //скорость
    write();
    if (score ==44){
-
-    
+       alert("пауза")
+    beginmusic.pause();
+    //midmusic.play();
     var img = new Image();
     img.onload = function() {
     carx.drawImage(img, 0, 8, 80, 80);
@@ -77,8 +78,13 @@ function start(){
     img.onload = function() {
     carx.drawImage(img, 0, -30, 300, 300);
   };
+  
   img.src = '../img/y11.gif';
+  alert(" Поздравляю, ваш результат " +count +" секунд(ы)");
+  
+  
    }
+   
 }
 function write(){
  
@@ -108,7 +114,7 @@ function draw() {
     
     
    
-    // requestAnimationFrame(draw)
+  
    
 }
 
