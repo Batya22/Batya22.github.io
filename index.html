@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 900px;
-  //  background: rgb(0, 0, 0) url(img/bg2.png);
+    background: rgb(0, 0, 0) url(img/bg2.png);
     vertical-align: bottom;
  
 
@@ -48,12 +48,12 @@
               count++;
               document.getElementById("count").innerHTML = count;
               setTimeout("timer()", 1000);
+            scorex.fillStyle = "#f00";
+            scorex.font = "24px Arial";
+            scorex.clearRect(10, 30, 100, 100);
+            scorex.fillText( count + " км", 40 , 120 )
             }
-            
-            count.fillStyle = "#f00";
-            count.font = "24px Arial";
-            count.clearRect(10, 30, 100, 100);
-            count.fillText( count + " км", 40 , 120 )
+           
             </script>
             
                 
