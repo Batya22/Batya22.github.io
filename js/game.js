@@ -24,7 +24,7 @@ bg.src = "../img/bg.png"
 
 //нажатие на клавишу
 document.addEventListener("keydown", start);
-//document.addEventListener ("touchstart", moveUp)
+document.addEventListener ("touchstart", start)
 // аудио
 var music = new Audio();
 var beginmusic = new Audio();
@@ -81,7 +81,10 @@ if (score ==1)
   
   img.src = '../img/y11.gif';
   alert(" Поздравляю, ваш результат " +count +" секунд(ы)");
-  
+  if (score==89)
+  {
+    start()
+  }
   
    }
    
@@ -112,10 +115,6 @@ function draw() {
         //music.play();
     }, 10 ); //скорость
     
-    
-   
-  
-   
 }
 
 
