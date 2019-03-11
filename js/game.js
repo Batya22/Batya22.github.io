@@ -30,11 +30,13 @@ var music = new Audio();
 var beginmusic = new Audio();
 var endmusic = new Audio();
 var midmusic = new Audio();
+var tts = new Audio();
 
 music.src = "../audio/intcut.mp3"
 beginmusic.src = "../audio/begin.mp3"
 endmusic.src = "../audio/end.mp3"
 midmusic.src = "../audio/mid.mp3"
+tts.src = "../audio/tts.mp3"
 
 
 function start(){
@@ -43,11 +45,11 @@ function start(){
     score++;
     
     
-
+    
 if (score ==1)   
     {
         timer();
-       
+        
     }
     window.setInterval(function () {
         if (!this.a || this.a < 0) this.a = 30000; //ширина img
@@ -61,6 +63,7 @@ if (score ==1)
     beginmusic.pause();
     midmusic.play();
     var img = new Image();
+    
     img.onload = function() {
     carx.drawImage(img, 0, 8, 80, 80);
   };
@@ -74,7 +77,7 @@ if (score ==1)
   };
   img.src = '../img/y8.gif';
    }
-   if (score ==88){
+   if (score ==89){
     var img = new Image();
     img.onload = function() {
     carx.drawImage(img, 0, -30, 300, 300);
@@ -82,13 +85,17 @@ if (score ==1)
   midmusic.pause ();
   endmusic.play();
   img.src = '../img/y11.gif';
-  alert(" Поздравляю, ваш результат " +count +" секунд(ы)");
-  if (score==89)
-  {
-    
-  }
   
-   }
+  alert(" Поздравляю, ваш результат " +count +" секунд(ы)");
+  endmusic.pause();
+  tts.play();
+}
+  if (score==90)
+  {
+    location.reload()
+  }
+
+   
    
 }
 function write(){
