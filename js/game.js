@@ -30,14 +30,22 @@ function draw() {
    // ctx.drawImage(bg, 0, 0);
    
     carx.drawImage(delor, xPos, yPos,200, 60)
-    music.play();
+    
     window.setInterval(function () {
         if (!this.a || this.a < 0) this.a = 30000; //ширина img
         else this.a--;
         document.getElementById("canvas").style.backgroundPosition = this.a + "px 210px" //высота, можно в %%, если родительский элемент тоже в %
-        }, 100); //скорость
+       
+    }, 100); //скорость
+    
+   
     requestAnimationFrame(draw)
+   
 }
 
-delor.onload= draw; 
+if (delor.onload = draw){
+   
+   music.play();
+} 
+
 // создание экземпляра движка
