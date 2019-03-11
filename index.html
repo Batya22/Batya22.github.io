@@ -11,23 +11,29 @@
  <style>
      
  #canvas {
-    
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0) url(img/bg2.png);
-    
+    height: 900px;
+    background: rgb(158, 78, 78) url(img/bg2.png);
+    vertical-align: bottom;
+ 
 
-    }</style>
+
+    }
+    #car {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 5;
+    height: 5;
+    vertical-align: bottom;
+    }
+    </style>
     
         <script language="JavaScript" type="text/javascript">
-            window.setInterval(function () {
-    if (!this.a || this.a < 0) this.a = 30000; //ширина img
-    else this.a--;
-    document.getElementById("canvas").style.backgroundPosition = this.a + "px 0px" //высота, можно в %%, если родительский элемент тоже в %
-    }, 5); //скорость
+            
             </script>
             
                 
@@ -38,7 +44,8 @@
 
 <body>
     
-  <canvas id="canvas" ></canvas> 
+  <canvas id="canvas"  ></canvas> 
+  <canvas id="car"  ></canvas> 
   <script src="js/game.js"></script> 
  
 

@@ -1,6 +1,8 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
+var car = document.getElementById("car");
+var carx = car.getContext("2d");
 
 var bg = new Image();
 var delor = new Image();
@@ -22,12 +24,18 @@ function moveUp(){
 
 //позиция машины
 var xPos= 0; 
-var yPos= 10;
+var yPos= 30;
+
 function draw() {
    // ctx.drawImage(bg, 0, 0);
    
-    ctx.drawImage(delor, xPos, yPos,)
-    //music.play();
+    carx.drawImage(delor, xPos, yPos,200, 60)
+    music.play();
+    window.setInterval(function () {
+        if (!this.a || this.a < 0) this.a = 30000; //ширина img
+        else this.a--;
+        document.getElementById("canvas").style.backgroundPosition = this.a + "px 210px" //высота, можно в %%, если родительский элемент тоже в %
+        }, 100); //скорость
     requestAnimationFrame(draw)
 }
 
