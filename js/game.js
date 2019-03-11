@@ -7,6 +7,9 @@ var carx = car.getContext("2d");
 var score = document.getElementById("score");
 var scorex = score.getContext("2d");
 
+/* var count1 = document.getElementById("count1");
+var count1x = count1.getContext("2d"); */
+
 
 
 var bg = new Image();
@@ -82,7 +85,7 @@ function write(){
  scorex.fillStyle = "#f00";
  scorex.font = "24px Arial";
  scorex.clearRect(10, 30, 100, 100);
- scorex.fillText( score + " км", 40 , 120 )
+ scorex.fillText( score + " mph", 40 , 120 )
  
  
  //requestAnimationFrame(write)

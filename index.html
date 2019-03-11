@@ -40,6 +40,7 @@
     vertical-align: bottom;
     }
     
+    
     </style>
     
         <script language="JavaScript" type="text/javascript">
@@ -48,10 +49,11 @@
               count++;
               document.getElementById("count").innerHTML = count;
               setTimeout("timer()", 1000);
-            scorex.fillStyle = "#f00";
-            scorex.font = "24px Arial";
-            scorex.clearRect(10, 30, 100, 100);
-            scorex.fillText( count + " км", 40 , 120 )
+
+              scorex.fillStyle = "#f00";
+              scorex.font = "24px Arial";
+              scorex.clearRect(120, 95, 400, 100);
+              scorex.fillText( count + " sec", 150 , 120 )
             }
            
             </script>
@@ -59,16 +61,17 @@
                 
             
 </head>
-
+<body onload="timer()">
+  секунд прошло 
+   <span id="count"  ></span>
      
 
-<body onload="timer()">
-  секунд прошло
-   <span id="count"  ></span>
+
   
   <canvas id="canvas"  ></canvas> 
   <canvas id="car"  ></canvas> 
   <canvas id="score"  ></canvas> 
+ // <canvas id="count1"  ></canvas> 
   <script src="js/game.js"></script> 
  
 
