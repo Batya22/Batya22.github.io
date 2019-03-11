@@ -35,7 +35,7 @@ function draw() {
         if (!this.a || this.a < 0) this.a = 30000; //ширина img
         else this.a--;
         document.getElementById("canvas").style.backgroundPosition = this.a + "px 210px" //высота, можно в %%, если родительский элемент тоже в %
-       
+        music.play();
     }, 100); //скорость
     
    
