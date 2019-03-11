@@ -44,7 +44,7 @@ function draw() {
 }
 
 if (delor.onload = draw){
-   
+    alert("включи звук, но не громко")
    music.play();
 } 
 
