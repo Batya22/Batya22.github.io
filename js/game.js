@@ -35,30 +35,31 @@ music.src = "../audio/intcut.mp3"
 beginmusic.src = "../audio/begin.mp3"
 endmusic.src = "../audio/end.mp3"
 midmusic.src = "../audio/mid.mp3"
-function moveUp(){
-    xPos +=2;
-}
+
 
 function start(){
     xPos -=6;
+
     score++;
     
-if (score ==1)
+    
+
+if (score ==1)   
     {
         timer();
+       
     }
     window.setInterval(function () {
         if (!this.a || this.a < 0) this.a = 30000; //ширина img
         else this.a--;
         document.getElementById("canvas").style.backgroundPosition = this.a + "px 210px" //высота, можно в %%, если родительский элемент тоже в %
-        //beginmusic.play();
+        
         
     }, xPos ); //скорость
    write();
-   if (score ==44){
-       alert("пауза")
+   if (score ==44){ 
     beginmusic.pause();
-    //midmusic.play();
+    midmusic.play();
     var img = new Image();
     img.onload = function() {
     carx.drawImage(img, 0, 8, 80, 80);
@@ -66,7 +67,7 @@ if (score ==1)
   img.src = '../img/y8.gif';
    }
    if (score ==66){
-
+    
     var img = new Image();
     img.onload = function() {
     carx.drawImage(img, 100, 30, 60, 60);
@@ -78,12 +79,13 @@ if (score ==1)
     img.onload = function() {
     carx.drawImage(img, 0, -30, 300, 300);
   };
-  
+  midmusic.pause ();
+  endmusic.play();
   img.src = '../img/y11.gif';
   alert(" Поздравляю, ваш результат " +count +" секунд(ы)");
   if (score==89)
   {
-    start()
+    
   }
   
    }
@@ -120,7 +122,7 @@ function draw() {
 
 if (delor.onload = draw){
     
-   //music.play();
+    beginmusic.play();
 } 
 
 // создание экземпляра движка
