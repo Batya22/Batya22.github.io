@@ -23,7 +23,7 @@ bg.src = "../img/bg.png"
 //y8.src = "../img/y8.png"
 
 //нажатие на клавишу
-document.addEventListener("keydown", start);
+document.addEventListener("click", start);
 document.addEventListener ("touchstart", start)
 // аудио
 var music = new Audio();
