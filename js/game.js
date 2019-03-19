@@ -48,6 +48,7 @@ function start(){
     
 if (score ==1)   
     {
+      beginmusic.play();
         timer();
         
     }
@@ -81,9 +82,10 @@ if (score ==1)
     var img = new Image();
     img.onload = function() {
     carx.drawImage(img, 0, -30, 300, 300);
+    midmusic.pause ();
+    endmusic.play();
   };
-  midmusic.pause ();
-  endmusic.play();
+  
   img.src = '../img/y11.gif';
   
   alert(" Поздравляю, ваш результат " +count +" секунд(ы)");
@@ -129,7 +131,7 @@ function draw() {
 
 if (delor.onload = draw){
     
-    beginmusic.play();
+    
 } 
 
 // создание экземпляра движка
