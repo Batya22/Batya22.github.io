@@ -97,8 +97,6 @@ if (score ==1)
     location.reload()
   }
 
-   
-   
 }
 function write(){
  
@@ -128,10 +126,8 @@ function draw() {
     
 }
 
-
 if (delor.onload = draw){
-    
-    
+      
 } 
 
 // создание экземпляра движка
